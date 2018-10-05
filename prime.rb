@@ -1,11 +1,8 @@
 def prime?(int)
   numbers = (2..(int - 1)).to_a
+  return false if int < 0
   numbers.each do |num|
-    if int % num == 0
-      return false
-    elsif int < 0
-      return false
-    end
+    return false if int % num == 0
   end
   true
 end
